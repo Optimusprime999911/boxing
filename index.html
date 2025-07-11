@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boxing World</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <h1>🥊 Boxing World</h1>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="rankings.html">Rankings</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="legends.html">Legends</a></li>
+        <li><a href="video.html">Videos</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section id="overview" class="section">
+      <h2 class="section-title">What is Boxing?</h2>
+      <p>
+        Boxing is a combat sport in which two participants, typically wearing protective gloves, throw punches at each other for a predetermined number of rounds inside a ring. It tests skill, stamina, strength, and strategy.
+      </p>
+    </section>
+
+    <section id="more-about-boxing" class="section">
+      <h2 class="section-title">Why Boxing Matters</h2>
+      <p>
+        Boxing is more than just a combat sport—it's a test of physical endurance, mental focus, and heart. Practiced by millions worldwide, boxing promotes discipline, self-control, and respect. It has also served as a platform for social change, with legendary figures like Muhammad Ali using their voice beyond the ring.
+      </p>
+    </section>
+
+    <section id="styles" class="section">
+      <h2 class="section-title">Boxing Styles</h2>
+      <ul>
+        <li><strong>Out-Boxer:</strong> Focuses on footwork, speed, and long-range jabs to outscore opponents. Example: Floyd Mayweather.</li>
+        <li><strong>Swarmer:</strong> Applies relentless pressure, thrives in close range. Example: Joe Frazier, Mike Tyson.</li>
+        <li><strong>Slugger:</strong> Known for raw power and knockout ability. Example: Deontay Wilder.</li>
+        <li><strong>Counterpuncher:</strong> Waits for opponent’s mistake and strikes back. Example: Juan Manuel Márquez.</li>
+      </ul>
+    </section>
+
+    <section id="benefits" class="section">
+      <h2 class="section-title">Benefits of Boxing</h2>
+      <ul>
+        <li>Improves cardiovascular health and full-body strength.</li>
+        <li>Enhances coordination, reflexes, and balance.</li>
+        <li>Builds mental toughness, confidence, and self-discipline.</li>
+        <li>Effective form of self-defense and stress relief.</li>
+      </ul>
+    </section>
+
+    <section id="global-impact" class="section">
+      <h2 class="section-title">Global Impact</h2>
+      <p>
+        Boxing is popular in countries across the globe, from the United States and Mexico to the Philippines and the UK. Major cities like Las Vegas, London, and Tokyo regularly host sold-out boxing events. Olympic boxing continues to be a key international showcase for rising stars.
+      </p>
+    </section>
+
+    <section id="history" class="section">
+      <h2 class="section-title">History of Boxing</h2>
+      <p>
+        Boxing dates back to ancient civilizations like Egypt and Greece. It became a modern sport in 18th-century England, eventually forming the Queensberry Rules in 1867, which shaped the sport we know today.
+      </p>
+    </section>
+
+    <section id="rules" class="section">
+      <h2 class="section-title">Basic Rules</h2>
+      <ul>
+        <li>A boxing match consists of 3 to 12 rounds, each lasting 3 minutes.</li> 
+        <li>Boxers are scored based on clean punches, defense, ring control, and technique.</li>
+        <li>A match ends via decision, knockout (KO), or technical knockout (TKO).</li>
+      </ul>
+    </section>
+
+    <section id="fights" class="section">
+      <h2 class="section-title">Upcoming Fights</h2>
+      <ul class="fights-list">
+        <li>Tyson Fury vs. Oleksandr Usyk<br /><strong>Starts in:</strong> <span id="countdown">Loading...</span></li>
+        <li>Gervonta Davis vs. Ryan Garcia<br /><em>Date TBA</em></li>
+      </ul>
+    </section>
+
+    <section id="video" class="section">
+      <h2 class="section-title">Highlight Video</h2>
+      <button id="open-video" class="btn-primary">Watch Highlights</button>
+
+      <div id="video-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="video-title" aria-hidden="true">
+        <div class="modal-content">
+          <button id="close-video" class="modal-close" aria-label="Close video">&times;</button>
+          <h3 id="video-title">Boxing Highlights</h3>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/7EMa8hMHcXI"
+            title="Boxing Highlights"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Boxing World</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
