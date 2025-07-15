@@ -3,185 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fight Schedule</title>
+  <title>Boxing Fighting World – Schedule</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    .month-section {
-      margin: 2rem 0;
-    }
-    .month-section h2 {
-      color: #e53935;
-      border-bottom: 2px solid #e53935;
-      padding-bottom: 0.25rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      padding: 0.75rem;
-      border: 1px solid #444;
-      text-align: left;
-      vertical-align: top;
-    }
-    th {
-      background: #222;
-      color: #fff;
-    }
-    tr:nth-child(even) {
-      background: #1a1a1a;
-    }
-    .fight-list {
-      margin: 0;
-      padding-left: 1.2rem;
-    }
-    .fight-list li {
-      margin-bottom: 0.25rem;
-    }
-  </style>
 </head>
 <body>
   <header>
-    <div class="nav-container">
-      <h1>🥊 Boxing World</h1>
+    <nav class="nav-container">
+      <h1 class="logo">🥊 Boxing Fighting World</h1>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="rankings.html">Rankings</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="schedule.html" class="active">Schedule</a></li>
         <li><a href="legends.html">Legends</a></li>
         <li><a href="video.html">Videos</a></li>
       </ul>
-    </div>
+      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+    </nav>
   </header>
 
   <main class="section">
     <h2>Upcoming Fight Schedule</h2>
 
-    <!-- July Section -->
-    <div class="month-section">
-      <h2>July 2025</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Location / Broadcaster</th>
-            <th>Fights & Titles</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>July 5</td>
-            <td>Manchester, England (DAZN)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Jack Catterall vs. Harlem Eubank – 12 rounds, Welterweights</li>
-                <li>Joe Cordina vs. Jaret Gonzalez Quiroz – 10 rounds, Lightweights</li>
-                <li>Aqib Fiaz vs. Alex Murphy – 10 rounds, Lightweights</li>
-                <!-- …other undercard bouts… -->
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>July 11</td>
-            <td>New York (Netflix)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Katie Taylor vs. Amanda Serrano – 10 rounds, Undisputed Women’s Jr. Welterweight Title</li>
-                <li>Alycia Baumgardner vs. Jennifer Miranda – 10 rounds, Undisputed Women’s Jr. Lightweight Title</li>
-                <!-- …more title bouts… -->
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>July 12</td>
-            <td>Queens, New York (DAZN)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Edgar Berlanga vs. Hamzah Sheeraz – 12 rounds, Middleweights</li>
-                <li>Shakur Stevenson vs. William Zepeda – 12 rounds, WBC Lightweight Title</li>
-                <li>Alberto Puello vs. Subriel Matias – 12 rounds, WBC Jr. Welterweight Title</li>
-                <!-- …other fights… -->
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>July 19</td>
-            <td>Las Vegas (Amazon Prime Video PPV)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Manny Pacquiao vs. Mario Barrios – 12 rounds, WBC Welterweight Title</li>
-                <li>Sebastian Fundora vs. Tim Tszyu – 12 rounds, WBC & WBO Jr. Middleweight Titles</li>
-                <!-- …more undercard… -->
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>July 26</td>
-            <td>New York (ESPN/ESPN+)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Xander Zayas vs. Jorge Garcia – 12 rounds, Vacant WBO Jr. Middleweight Title</li>
-                <li>Bruce “Shu Shu” Carrington vs. Mateus Heita – 12 rounds, WBC Interim Featherweight Title</li>
-                <!-- …additional fights… -->
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Data sourced from ESPN’s “Full Schedule” :contentReference[oaicite:0]{index=0} -->
-    </div>
-
-    <!-- August / September Section -->
-    <div class="month-section">
-      <h2>August – September 2025</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Location / Broadcaster</th>
-            <th>Fights & Titles</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Aug. 2</td>
-            <td>Chicago (DAZN)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Oscar Duarte vs. Kenneth Sims Jr. – 12 rounds, Jr. Welterweights</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>Aug. 16</td>
-            <td>Riyadh, Saudi Arabia (DAZN)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Moses Itauma vs. Dillian Whyte – 12 rounds, Heavyweights</li>
-                <li>Nick Ball vs. Sam Goodman – 12 rounds, WBA Featherweight Title</li>
-                <li>David Adeleye vs. Filip Hrgovic – 12 rounds, Heavyweights</li>
-              </ul>
-            </td>
-          </tr>
-          <tr>
-            <td>Sept. 13</td>
-            <td>Las Vegas (Netflix)</td>
-            <td>
-              <ul class="fight-list">
-                <li>Canelo Alvarez vs. Terence Crawford – 12 rounds, Undisputed Super Middleweight Championship</li>
-              </ul>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <!-- Data sourced from ESPN’s “Full Schedule” :contentReference[oaicite:1]{index=1} -->
-    </div>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Fight</th><th>Location</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>July 11</td><td>Katie Taylor vs. Amanda Serrano</td><td>New York, USA</td></tr>
+        <tr><td>July 19</td><td>Manny Pacquiao vs. Mario Barrios</td><td>Las Vegas, USA</td></tr>
+        <tr><td>Aug 16</td><td>Claressa Shields vs. ______</td><td>Detroit, USA</td></tr>
+        <tr><td>Sept 13</td><td>Canelo Alvarez vs. Terence Crawford</td><td>Las Vegas, USA</td></tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
   </main>
 
   <footer>
-    <p>&copy; 2025 Boxing World</p>
+    <p>&copy; 2025 Boxing Fighting World</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
