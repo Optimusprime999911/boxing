@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boxing Fighting World – Rankings</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <header id="header">
     <nav class="nav-container">
       <h1 class="logo">🥊 Boxing Fighting World</h1>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
@@ -18,19 +18,17 @@
         <li><a href="legends.html">Legends</a></li>
         <li><a href="video.html">Videos</a></li>
       </ul>
-      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <button id="theme-toggle" class="theme-toggle">🌗</button>
     </nav>
   </header>
 
   <main class="section">
     <h2>Top Fighters by Division</h2>
 
-    <div class="division">
+    <div class="table-container">
       <h3>Heavyweight</h3>
       <table>
-        <thead>
-          <tr><th>Rank</th><th>Fighter</th><th>Record</th></tr>
-        </thead>
+        <thead><tr><th>Rank</th><th>Fighter</th><th>Record</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>Oleksandr Usyk</td><td>22‑0‑0</td></tr>
           <tr><td>2</td><td>Tyson Fury</td><td>34‑2‑1</td></tr>
@@ -41,12 +39,10 @@
       </table>
     </div>
 
-    <div class="division">
+    <div class="table-container">
       <h3>Welterweight</h3>
       <table>
-        <thead>
-          <tr><th>Rank</th><th>Fighter</th><th>Record</th></tr>
-        </thead>
+        <thead><tr><th>Rank</th><th>Fighter</th><th>Record</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>Terence Crawford</td><td>41‑0‑0</td></tr>
           <tr><td>2</td><td>Vergil Ortiz Jr.</td><td>23‑0‑0</td></tr>
@@ -56,14 +52,11 @@
         </tbody>
       </table>
     </div>
-
-    <!-- Add more divisions similarly -->
   </main>
 
   <footer>
     <p>&copy; 2025 Boxing Fighting World</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>

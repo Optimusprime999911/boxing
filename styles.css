@@ -5,122 +5,199 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #111;
-  color: #eee;
-  line-height: 1.6;
-  transition: background-color 0.3s, color 0.3s;
-  padding-bottom: 60px;
+/* Color Variables */
+:root {
+  --bg: #111;
+  --text: #eee;
+  --accent: #e53935;
+  --card: #222;
 }
 
 body.light {
-  background-color: #f4f4f4;
-  color: #111;
+  --bg: #f4f4f4;
+  --text: #111;
+  --accent: #b71c1c;
+  --card: #fff;
 }
 
+/* Body */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+  padding-bottom: 60px;
+}
+
+/* Header & Navigation */
 header {
-  background-color: #222;
-  padding: 1rem;
+  background: var(--card);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 }
-
-body.light header {
-  background-color: #fff;
-}
-
 .nav-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
-
 .logo {
   font-size: 1.5rem;
-  color: #e53935;
+  color: var(--accent);
 }
-
 .nav-links {
   display: flex;
   gap: 1rem;
-  list-style: none;
+  flex-wrap: wrap;
 }
-
 .nav-links a {
-  color: #eee;
+  color: var(--text);
   text-decoration: none;
   font-weight: bold;
 }
-
-body.light .nav-links a {
-  color: #333;
-}
-
-#theme-toggle {
+.menu-toggle,
+.theme-toggle {
   background: none;
   border: none;
-  font-size: 1.4rem;
+  color: var(--text);
+  font-size: 1.5rem;
   cursor: pointer;
-  color: #eee;
 }
 
-body.light #theme-toggle {
-  color: #111;
-}
-
+/* Sections */
 .section {
   max-width: 1000px;
   margin: auto;
   padding: 2rem 1rem;
 }
-
+.section-title,
 h2 {
-  color: #e53935;
+  color: var(--accent);
   margin-bottom: 1rem;
 }
-
 ul li {
   margin-bottom: 0.5rem;
 }
 
+/* News Grid */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.news-article {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.news-article:hover {
+  transform: scale(1.03);
+}
+.news-article img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.news-content {
+  padding: 1rem;
+}
+
+/* Legends Grid */
+.boxer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.boxer-card {
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.boxer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+.boxer-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-bottom: 0.75rem;
+}
+
+/* Make sure Legends collapse to one column on small screens */
+@media (max-width: 500px) {
+  .boxer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Table Container */
+.table-container {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 0.75rem;
+  border: 1px solid #444;
+  text-align: left;
+}
+th {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Footer */
 footer {
-  background-color: #222;
+  background: var(--card);
   color: #ccc;
   text-align: center;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 1rem 0;
+  position: relative;
 }
 
-body.light footer {
-  background-color: #ddd;
-  color: #444;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Nav */
+@media (max-width: 600px) {
   .nav-links {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-
-  .logo {
+    display: none;
     width: 100%;
-    margin-bottom: 0.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
   }
-
-  #theme-toggle {
-    align-self: flex-end;
-  }
-
-  footer {
-    position: relative;
+  .nav-links.open {
+    display: flex;
   }
 }

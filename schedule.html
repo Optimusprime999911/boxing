@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boxing Fighting World – Schedule</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
+  <header id="header">
     <nav class="nav-container">
       <h1 class="logo">🥊 Boxing Fighting World</h1>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="news.html">News</a></li>
@@ -18,31 +18,28 @@
         <li><a href="legends.html">Legends</a></li>
         <li><a href="video.html">Videos</a></li>
       </ul>
-      <button id="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <button id="theme-toggle" class="theme-toggle">🌗</button>
     </nav>
   </header>
 
   <main class="section">
     <h2>Upcoming Fight Schedule</h2>
-
-    <table>
-      <thead>
-        <tr><th>Date</th><th>Fight</th><th>Location</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>July 11</td><td>Katie Taylor vs. Amanda Serrano</td><td>New York, USA</td></tr>
-        <tr><td>July 19</td><td>Manny Pacquiao vs. Mario Barrios</td><td>Las Vegas, USA</td></tr>
-        <tr><td>Aug 16</td><td>Claressa Shields vs. ______</td><td>Detroit, USA</td></tr>
-        <tr><td>Sept 13</td><td>Canelo Alvarez vs. Terence Crawford</td><td>Las Vegas, USA</td></tr>
-        <!-- Add more rows as needed -->
-      </tbody>
-    </table>
+    <div class="table-container">
+      <table>
+        <thead><tr><th>Date</th><th>Fight</th><th>Location</th></tr></thead>
+        <tbody>
+          <tr><td>July 11, 2025</td><td>Katie Taylor vs. Amanda Serrano</td><td>New York, USA</td></tr>
+          <tr><td>July 19, 2025</td><td>Manny Pacquiao vs. Mario Barrios</td><td>Las Vegas, USA</td></tr>
+          <tr><td>August 16, 2025</td><td>Claressa Shields vs. TBD</td><td>Detroit, USA</td></tr>
+          <tr><td>September 13, 2025</td><td>Canelo Álvarez vs. Terence Crawford</td><td>Las Vegas, USA</td></tr>
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Boxing Fighting World</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
