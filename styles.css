@@ -1,11 +1,10 @@
-/* Base Reset */
+/* Reset & Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Color Variables */
 :root {
   --bg: #111;
   --text: #eee;
@@ -20,7 +19,6 @@ body.light {
   --card: #fff;
 }
 
-/* Body */
 body {
   background: var(--bg);
   color: var(--text);
@@ -30,7 +28,7 @@ body {
   padding-bottom: 60px;
 }
 
-/* Header & Navigation */
+/* Header & Nav */
 header {
   background: var(--card);
   position: sticky;
@@ -60,6 +58,9 @@ header {
   text-decoration: none;
   font-weight: bold;
 }
+.nav-links a.active {
+  border-bottom: 2px solid var(--accent);
+}
 .menu-toggle,
 .theme-toggle {
   background: none;
@@ -84,13 +85,21 @@ ul li {
   margin-bottom: 0.5rem;
 }
 
-/* News Grid */
-.news-grid {
+/* Grids */
+.news-grid,
+.boxer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
+.news-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.boxer-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* News Articles */
 .news-article {
   background: var(--card);
   border-radius: 8px;
@@ -102,48 +111,33 @@ ul li {
 }
 .news-article img {
   width: 100%;
-  height: auto;
   display: block;
 }
 .news-content {
   padding: 1rem;
 }
 
-/* Legends Grid */
-.boxer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
+/* Boxer Cards */
 .boxer-card {
   background: var(--card);
   border-radius: 8px;
   overflow: hidden;
-  padding: 1rem;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.boxer-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
 }
 .boxer-card img {
   width: 100%;
-  height: auto;
+  display: block;
   border-radius: 6px;
-  object-fit: cover;
-  margin-bottom: 0.75rem;
+}
+.boxer-card h3 {
+  padding: 0.5rem;
+}
+.boxer-card:hover {
+  transform: scale(1.05);
 }
 
-/* Make sure Legends collapse to one column on small screens */
-@media (max-width: 500px) {
-  .boxer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Table Container */
+/* Tables */
 .table-container {
   overflow-x: auto;
   margin-top: 1rem;
@@ -152,7 +146,8 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
-th, td {
+th,
+td {
   padding: 0.75rem;
   border: 1px solid #444;
   text-align: left;
@@ -162,21 +157,54 @@ th {
   color: #fff;
 }
 
-/* Video Container */
+/* Responsive Video */
 .video-container {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 */
   height: 0;
   overflow: hidden;
   margin-top: 1rem;
 }
-.video-container iframe {
+.video-container iframe,
+.modal-content iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.modal[aria-hidden="false"] {
+  display: flex;
+}
+.modal-content {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 90%;
+  width: 600px;
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Footer */
@@ -188,16 +216,23 @@ footer {
   position: relative;
 }
 
-/* Responsive Nav */
-@media (max-width: 600px) {
+/* Mobile */
+@media (max-width: 768px) {
   .nav-links {
     display: none;
-    width: 100%;
     flex-direction: column;
+    width: 100%;
     gap: 0.5rem;
     margin-top: 0.5rem;
   }
-  .nav-links.open {
+  .nav-links.show {
     display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .boxer-grid,
+  .news-grid {
+    grid-template-columns: 1fr;
   }
 }

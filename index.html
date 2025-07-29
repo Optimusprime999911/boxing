@@ -3,119 +3,141 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Boxing Fighting World</title>
+  <title>Boxing Fighting World – Home</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header id="header">
     <div class="nav-container">
       <h1 class="logo">🥊 Boxing Fighting World</h1>
-      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <button id="menu-toggle" class="menu-toggle">☰</button>
       <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="news.html">News</a></li>
         <li><a href="rankings.html">Rankings</a></li>
         <li><a href="schedule.html">Schedule</a></li>
         <li><a href="legends.html">Legends</a></li>
         <li><a href="video.html">Videos</a></li>
       </ul>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">🌗</button>
+      <button id="theme-toggle" class="theme-toggle">🌗</button>
     </div>
   </header>
 
   <main>
+    <!-- Hero Section -->
+    <section class="section hero">
+      <h2>Welcome to Boxing Fighting World</h2>
+      <p>Your ultimate hub for the latest boxing news, rankings, legends, and fight previews.</p>
+      <a href="news.html" class="btn-primary">Read Latest News</a>
+    </section>
+
+    <!-- Overview -->
     <section id="overview" class="section">
       <h2 class="section-title">What is Boxing?</h2>
-      <p>
-        Boxing is a combat sport in which two participants, typically wearing protective gloves,
-        throw punches at each other for a predetermined number of rounds inside a ring. It tests
-        skill, stamina, strength, and strategy.
-      </p>
+      <p>Boxing is a combat sport in which two participants, wearing padded gloves, exchange punches inside a roped ring over timed rounds. It combines speed, power, footwork, and ring IQ.</p>
     </section>
 
+    <!-- Why Boxing Matters -->
     <section id="more-about-boxing" class="section">
       <h2 class="section-title">Why Boxing Matters</h2>
-      <p>
-        Boxing is more than just a combat sport—it's a test of physical endurance, mental focus,
-        and heart. Practiced by millions worldwide, boxing promotes discipline, self-control,
-        and respect. It has also served as a platform for social change, with legendary figures
-        like Muhammad Ali using their voice beyond the ring.
-      </p>
+      <p>Beyond physical prowess, boxing builds discipline, mental toughness, and confidence. Legends like Muhammad Ali transcended the sport to inspire social change.</p>
     </section>
 
+    <!-- Styles of Boxing -->
     <section id="styles" class="section">
       <h2 class="section-title">Boxing Styles</h2>
       <ul>
-        <li><strong>Out-Boxer:</strong> Focuses on footwork, speed, and long-range jabs to outscore opponents. Example: Floyd Mayweather.</li>
-        <li><strong>Swarmer:</strong> Applies relentless pressure, thrives in close range. Example: Joe Frazier, Mike Tyson.</li>
-        <li><strong>Slugger:</strong> Known for raw power and knockout ability. Example: Deontay Wilder.</li>
-        <li><strong>Counterpuncher:</strong> Waits for opponent’s mistake and strikes back. Example: Juan Manuel Márquez.</li>
+        <li><strong>Out-Boxer:</strong> Uses reach and speed to score. (e.g., Floyd Mayweather)</li>
+        <li><strong>Swarmer:</strong> Pressures opponents at close range. (e.g., Joe Frazier)</li>
+        <li><strong>Slugger:</strong> Relies on power and knockouts. (e.g., George Foreman)</li>
+        <li><strong>Counterpuncher:</strong> Waits for mistakes to strike. (e.g., Juan Manuel Márquez)</li>
       </ul>
     </section>
 
+    <!-- Benefits -->
     <section id="benefits" class="section">
       <h2 class="section-title">Benefits of Boxing</h2>
       <ul>
-        <li>Improves cardiovascular health and full-body strength.</li>
-        <li>Enhances coordination, reflexes, and balance.</li>
-        <li>Builds mental toughness, confidence, and self-discipline.</li>
-        <li>Effective form of self-defense and stress relief.</li>
+        <li>Cardiovascular health and strength</li>
+        <li>Improved coordination and reflexes</li>
+        <li>Mental resilience and focus</li>
+        <li>Stress relief and self-defense skills</li>
       </ul>
     </section>
 
-    <section id="global-impact" class="section">
-      <h2 class="section-title">Global Impact</h2>
-      <p>
-        Boxing is popular in countries across the globe, from the United States and Mexico to the
-        Philippines and the UK. Major cities like Las Vegas, London, and Tokyo regularly host
-        sold-out boxing events. Olympic boxing continues to be a key international showcase for rising stars.
-      </p>
+    <!-- Featured News -->
+    <section class="section">
+      <h2 class="section-title">Featured News</h2>
+      <div class="news-grid">
+        <article class="news-article">
+          <img src="https://wbcboxing.com/wp-content/uploads/paul-chavez.jpg" alt="Jake Paul vs. Chavez Jr">
+          <div class="news-content">
+            <h3><a href="news.html">Jake Paul Tops Chavez Jr.</a></h3>
+            <p>Paul’s upset win cements his place among cruiserweights.</p>
+          </div>
+        </article>
+        <article class="news-article">
+          <img src="https://nationaltoday.com/wp-content/uploads/2025/05/vvG10ZbnrVaxcg-1278x834.jpg" alt="Heavyweight Rematch">
+          <div class="news-content">
+            <h3><a href="news.html">Fury vs. Usyk II Announced</a></h3>
+            <p>Heavyweight rematch set for August 12 in Riyadh.</p>
+          </div>
+        </article>
+      </div>
+      <a href="news.html" class="btn-secondary">View All News</a>
     </section>
 
-    <section id="history" class="section">
-      <h2 class="section-title">History of Boxing</h2>
-      <p>
-        Boxing dates back to ancient civilizations like Egypt and Greece. It became a modern sport
-        in 18th-century England, eventually forming the Queensberry Rules in 1867, which shaped
-        the sport we know today.
-      </p>
+    <!-- Top Fighters Snapshot -->
+    <section class="section">
+      <h2 class="section-title">Top Fighters Snapshot</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr><th>Division</th><th>Top Fighter</th><th>Record</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Heavyweight</td><td>Oleksandr Usyk</td><td>22‑0‑0</td></tr>
+            <tr><td>Welterweight</td><td>Terence Crawford</td><td>41‑0‑0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="rankings.html" class="btn-secondary">See Full Rankings</a>
     </section>
 
-    <section id="rules" class="section">
-      <h2 class="section-title">Basic Rules</h2>
-      <ul>
-        <li>A boxing match consists of 3 to 12 rounds, each lasting 3 minutes.</li>
-        <li>Boxers are scored based on clean punches, defense, ring control, and technique.</li>
-        <li>A match ends via decision, knockout (KO), or technical knockout (TKO).</li>
-      </ul>
+    <!-- Legends Spotlight -->
+    <section class="section">
+      <h2 class="section-title">Legends Spotlight</h2>
+      <div class="boxer-grid">
+        <div class="boxer-card">
+          <img src="https://i.etsystatic.com/19535642/r/il/c3691b/1924573871/il_1080xN.1924573871_rxs9.jpg" alt="Muhammad Ali">
+          <h3><a href="legends.html">Muhammad Ali</a></h3>
+        </div>
+        <div class="boxer-card">
+          <img src="https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQZ1wGr42-_FzLhinuoyGVSXkO4bGzrZT7Ka6xn3g8Mefmv9Bd90ezaC1nutj7HmB7s3jHbw1G2eTpDJxAUcu-QqoeQvTN16Sgb-SiTHp3pXXuIoZeMfR9YUAxRrB4ToqRYmdId7XTBqFWW4EOTkmJEsOscw.jpg" alt="Mike Tyson">
+          <h3><a href="legends.html">Mike Tyson</a></h3>
+        </div>
+      </div>
+      <a href="legends.html" class="btn-secondary">Explore All Legends</a>
     </section>
 
+    <!-- Upcoming Fights -->
     <section id="fights" class="section">
       <h2 class="section-title">Upcoming Fights</h2>
       <ul class="fights-list">
-        <li>Tyson Fury vs. Oleksandr Usyk<br /><strong>Starts in:</strong> <span id="countdown">Loading...</span></li>
-        <li>Gervonta Davis vs. Ryan Garcia<br /><em>Date TBA</em></li>
+        <li>Tyson Fury vs. Oleksandr Usyk — <strong><span id="countdown">Loading...</span></strong></li>
+        <li>Gervonta Davis vs. Ryan Garcia — <em>Date TBA</em></li>
       </ul>
+      <a href="schedule.html" class="btn-secondary">Full Fight Schedule</a>
     </section>
 
-    <section id="video" class="section">
-      <h2 class="section-title">Highlight Video</h2>
-      <button id="open-video" class="btn-primary">Watch Highlights</button>
-
-      <div id="video-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="video-title" aria-hidden="true">
-        <div class="modal-content">
-          <button id="close-video" class="modal-close" aria-label="Close video">&times;</button>
-          <h3 id="video-title">Boxing Highlights</h3>
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/7EMa8hMHcXI"
-            title="Boxing Highlights"
-            frameborder="0"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </div>
+    <!-- Newsletter Signup -->
+    <section class="section">
+      <h2 class="section-title">Stay Updated</h2>
+      <p>Join our newsletter for weekly boxing insights and fight alerts.</p>
+      <form action="#" class="newsletter-form">
+        <input type="email" placeholder="Your email address" required>
+        <button type="submit" class="btn-primary">Subscribe</button>
+      </form>
     </section>
   </main>
 
